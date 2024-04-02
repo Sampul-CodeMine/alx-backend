@@ -31,7 +31,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 
 > Setup: **Popular_Baby_Names.csv**
 >
-> <a href="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2020/5/7d3576d97e7560ae85135cc214ffe2b3412c51d7.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240402T100825Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=9625730366eed89de44884431cd042ce1b9bbbb7236141e8441ff244f47d8e67" target="_blank">use this data file</a> for your project
+> <a href="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2020/5/7d3576d97e7560ae85135cc214ffe2b3412c51d7.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20240402%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240402T100825Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=9625730366eed89de44884431cd042ce1b9bbbb7236141e8441ff244f47d8e67" target="_blank">use this data file</a> for your project. A copy is also found <a href="https://github.com/Sampul-CodeMine/alx-backend/blob/master/0x00-pagination/Popular_Baby_Names.csv">here</a>
 >
 
 ---
