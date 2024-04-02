@@ -8,11 +8,11 @@ In this project, you learn different caching algorithms.
 
 Read or watch:
 
-- <a href="" target="_blank">Cache replacement policies - FIFO</a>
-- <a href="" target="_blank">Cache replacement policies - LIFO</a>
-- <a href="" target="_blank">Cache replacement policies - LRU</a>
-- <a href="" target="_blank">Cache replacement policies - MRU</a>
-- <a href="" target="_blank">Cache replacement policies - LFU</a>
+- <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#First_In_First_Out_%28FIFO%29" target="_blank">Cache replacement policies - FIFO</a>
+- <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Last_In_First_Out_%28LIFO%29" target="_blank">Cache replacement policies - LIFO</a>
+- <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_%28LRU%29" target="_blank">Cache replacement policies - LRU</a>
+- <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_Recently_Used_%28MRU%29" target="_blank">Cache replacement policies - MRU</a>
+- <a href="https://en.wikipedia.org/wiki/Cache_replacement_policies#Least-Frequently_Used_%28LFU%29" target="_blank">Cache replacement policies - LFU</a>
 
 ## Learning Objectives
 
