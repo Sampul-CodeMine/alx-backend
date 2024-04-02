@@ -53,7 +53,6 @@ All your classes must inherit from `BaseCaching` defined below:
 
 > ```python
 > 
-> $ cat base_caching.py
 > #!/usr/bin/python3
 > """ BaseCaching module
 > """
