@@ -35,10 +35,10 @@ def get_user() -> (dict | None):
     Returns:
         (dict) if the user's info as a dictionary if found else (None)
     """
-    user_id = request.args.get('login_as', '')
-    if user_id:
-        return users.get(int(user_id), None)
-    return None
+    user_id = request.args.get('login_as', None)
+    if user_id is None and user_id not in users.keys():
+        return None
+    return users.get(int(user_id))
 
 
 @app.before_request
