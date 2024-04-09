@@ -4,9 +4,9 @@
 
 **Read or watch:**
 
-- <a href="" target="_blank">Flask-Babel</a>
-- <a href="" target="_blank">Flask i18n tutorial</a>
-- <a href="" target="_blank">pytz</a>
+- <a href="https://web.archive.org/web/20201111174034/https://flask-babel.tkte.ch/" target="_blank">Flask-Babel</a>
+- <a href="https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n" target="_blank">Flask i18n tutorial</a>
+- <a href="https://pypi.org/project/pytz/" target="_blank">pytz</a>
 
 ## Learning Objectives
 
