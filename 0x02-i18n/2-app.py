@@ -15,7 +15,7 @@ class Config:
 
 app = Flask(__name__)
 app.config.from_object(Config)
-app.debug = False
+app.debug = True
 babel = Babel(app)
 
 

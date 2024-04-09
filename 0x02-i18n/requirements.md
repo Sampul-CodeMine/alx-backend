@@ -1,10 +1,9 @@
 Babel==2.14.0
-blinker==1.7.0
-click==8.1.7
-Flask==2.3.0
+click==7.1.2
+Flask==1.1.4
 Flask-Babel==2.0.0
-itsdangerous==2.1.2
-Jinja2==3.1.3
-MarkupSafe==2.1.5
+itsdangerous==1.1.0
+Jinja2==2.11.3
+MarkupSafe==1.1.1
 pytz==2024.1
-Werkzeug==3.0.2
+Werkzeug==1.0.1
