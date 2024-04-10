@@ -2,8 +2,9 @@
 """
 This is a Basic Flask App to create a simple route using Flask Babel Setup
 """
-from flask import Flask, g, render_template, request
+from flask import Flask, render_template, request, g
 from flask_babel import Babel
+from typing import Union, Dict
 
 
 # Mock data to depict a user's logged in sessions and info
@@ -28,7 +29,7 @@ app.debug = True
 babel = Babel(app)
 
 
-def get_user() -> (dict | None):
+def get_user() -> Union[Dict, None]:
     """
     This is a function that gets the data of an assumed logged in user
 
@@ -36,9 +37,12 @@ def get_user() -> (dict | None):
         (dict) if the user's info as a dictionary if found else (None)
     """
     user_id = request.args.get('login_as', None)
-    if user_id is None and user_id not in users.keys():
-        return None
-    return users.get(int(user_id))
+    # print(user_id)
+    if user_id is not None and int(user_id) in users.keys():
+        user_details = users.get(int(user_id), None)
+        # print(user_details)
+        return user_details
+    return None
 
 
 @app.before_request
@@ -47,8 +51,7 @@ def before_request() -> None:
     A function that gets executed before any function to set or get a user
     and set the user as global on `flask.g.user`
     """
-    logged_in_user = get_user()
-    g.user = logged_in_user
+    g.user = get_user()
 
 
 @babel.localeselector
@@ -59,9 +62,17 @@ def get_locale() -> str:
     Returns:
         str: Returns a string
     """
-    lang = request.args.get('locale')
-    return lang if lang in app.config['LANGUAGES'] else \
-        request.accept_languages.best_match(app.config['LANGUAGES'])
+    lang = request.args.get('locale', None)
+    if lang in app.config['LANGUAGES']:
+        return lang
+    if g.user:
+        lang = g.user.get('locale')
+        if lang and lang in app.config['LANGUAGES']:
+            return lang
+    h_lang = request.headers.get('locale', None)
+    if h_lang and h_lang in app.config['LANGUAGES']:
+        return h_lang
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
 @app.route('/', strict_slashes=False)
@@ -71,7 +82,7 @@ def index() -> str:
     Returns:
         str: Returns a string in the index page
     """
-    return render_template('5-index.html')
+    return render_template('6-index.html')
 
 
 if __name__ == '__main__':
