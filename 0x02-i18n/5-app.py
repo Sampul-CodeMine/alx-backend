@@ -36,8 +36,11 @@ def get_user() -> (dict | None):
         (dict) if the user's info as a dictionary if found else (None)
     """
     user_id = request.args.get('login_as', '')
+    # print(user_id)
     if user_id:
-        return users.get(int(user_id), None)
+        user_details = users.get(int(user_id), None)
+        # print(user_details)
+        return user_details
     return None
 
 
@@ -47,8 +50,7 @@ def before_request() -> None:
     A function that gets executed before any function to set or get a user
     and set the user as global on `flask.g.user`
     """
-    logged_in_user = get_user()
-    g.user = logged_in_user
+    g.user = get_user()
 
 
 @babel.localeselector
