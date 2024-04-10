@@ -2,8 +2,9 @@
 """
 This is a Basic Flask App to create a simple route using Flask Babel Setup
 """
-from flask import Flask, g, render_template, request
+from flask import Flask, render_template, request, g
 from flask_babel import Babel
+from typing import Union, Dict
 
 
 # Mock data to depict a user's logged in sessions and info
@@ -28,16 +29,16 @@ app.debug = True
 babel = Babel(app)
 
 
-def get_user() -> (dict | None):
+def get_user() -> Union[Dict, None]:
     """
     This is a function that gets the data of an assumed logged in user
 
     Returns:
         (dict) if the user's info as a dictionary if found else (None)
     """
-    user_id = request.args.get('login_as', '')
+    user_id = request.args.get('login_as', None)
     # print(user_id)
-    if user_id:
+    if user_id is not None and int(user_id) in users.keys():
         user_details = users.get(int(user_id), None)
         # print(user_details)
         return user_details
