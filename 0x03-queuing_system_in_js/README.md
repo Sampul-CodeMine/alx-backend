@@ -97,8 +97,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
     wget http://download.redis.io/releases/redis-6.0.10.tar.gz
     tar xzf redis-6.0.10.tar.gz
     cd redis-6.0.10
-    make MALLOC=libc # for Linux systems
-    # make MALLOC=jemalloc # for Mac OS X systems
+    make MALLOC=libc
     ```
     + Start Redis in the background with `src/redis-server`.
     + Make sure that the server is working with a ping `src/redis-cli ping`.
